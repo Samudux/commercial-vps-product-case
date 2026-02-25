@@ -1166,3 +1166,17 @@ h4 { font-size: 16px; }
 
 
 }
+/* ===== HOTFIX: TRIAGEM EM 1 COLUNA NO MOBILE ===== */
+@media (max-width: 768px){
+
+  /* pega qualquer grid/flex que esteja criando 2 colunas dentro da seção IA */
+  .ia-section .container > div{
+    display: block !important;
+  }
+
+  /* garante que a coluna dos cards ocupe 100% e não "grude" do lado */
+  .ia-section .ia-steps{
+    margin-top: 24px;
+  }
+
+}
