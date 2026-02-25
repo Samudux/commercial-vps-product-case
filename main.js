@@ -1,5 +1,6 @@
 /* =============================================
-   COMMERCIAL VPS — main.js  v2.0
+   COMMERCIAL VPS — main.js  v2.1
+   (smooth scroll limpo + restante igual)
    ============================================= */
 
 (function () {
@@ -13,7 +14,7 @@
   }
 
   /* --- CINEMA INTRO ---
-     bar: 2.7s CSS | JS delay: 2800ms | fade: 0.5s = 3.0s total (dentro de 2.6–3.0s)
+     bar: 2.7s CSS | JS delay: 2800ms | fade: 0.5s
      reduced-motion: 200ms | fail-safe: 4000ms
   */
   function runCinema() {
@@ -137,6 +138,19 @@
       el.setAttribute('href', buildWhatsAppURL(msg));
       el.setAttribute('target', '_blank');
       el.setAttribute('rel', 'noopener noreferrer');
+    });
+  }
+
+  /* --- SMOOTH SCROLL (sem inline onclick) --- */
+  function initSmoothScroll() {
+    document.querySelectorAll('.js-scroll[data-scroll]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        var sel = el.getAttribute('data-scroll');
+        var target = sel ? document.querySelector(sel) : null;
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     });
   }
 
@@ -286,6 +300,7 @@
     setActiveNav();
     initContactForm();
     initWhatsApp();
+    initSmoothScroll();
     initModal();
     initReveal();
   });
