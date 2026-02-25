@@ -80,7 +80,6 @@ body {
   align-items: center;
   justify-content: center;
   gap: 24px;
-  /* fade-out: 500ms suave + leve blur */
   transition: opacity 0.5s var(--ease), filter 0.5s var(--ease);
 }
 
@@ -102,8 +101,7 @@ body {
   height: 92px;
   width: auto;
   object-fit: contain;
-  /* fundo preto da PNG desaparece sobre o overlay escuro com lighten */
-  }
+}
 
 .cinema-logo-fallback { display: none; }
 .cinema-logo-img:not([src]), .cinema-logo-img[src=""] ~ .cinema-logo-fallback,
@@ -127,7 +125,6 @@ body {
   overflow: hidden;
 }
 
-/* bar: 2.4s CSS | JS dispara em 2500ms | fade: 0.5s = 3.0s total */
 .cinema-bar-fill {
   height: 100%;
   width: 0%;
@@ -143,7 +140,6 @@ body {
   100% { width: 100%; }
 }
 
-/* prefers-reduced-motion: overlay some em 200ms sem animação */
 @media (prefers-reduced-motion: reduce) {
   #cinema-overlay { transition-duration: 0.15s; }
   .cinema-bar-fill { animation-duration: 0.15s; }
@@ -186,40 +182,6 @@ h4 { font-size: 16px; }
   padding: 0 var(--sp-lg);
 }
 
-@media (max-width: 768px) {
-  .container { padding: 0 var(--sp-sm); }
-
-  /* ===== FIX LAYOUT TRIAGEM MOBILE (1 COLUNA) ===== */
-  .ia-wrap{
-    grid-template-columns: 1fr !important;
-    gap: 24px;
-  }
-  .ia-head{
-    max-width: 100%;
-  }
-
-  /* ===== FIX TRIAGEM / IA (MOBILE) ===== */
-  .ia-btns{
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .ia-btns .btn{
-    width: 100%;
-    justify-content: center;
-    white-space: normal;
-    text-align: center;
-  }
-  .ia-step,
-  .ia-step p,
-  .ia-step h4{
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-
-}
-
 .section { padding: var(--sp-2xl) 0; }
 .section-sm { padding: var(--sp-xl) 0; }
 
@@ -236,7 +198,7 @@ h4 { font-size: 16px; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 84px; /* mais confortável para a logo */
+  height: 84px;
 }
 
 .nav-logo {
@@ -257,14 +219,12 @@ h4 { font-size: 16px; }
   gap: 4px;
 }
 
-/* Logo image in nav */
 .nav-logo-img {
   height: 56px;
   width: auto;
   object-fit: contain;
   display: block;
-  /* PNG tem fundo preto — sem filtro. Usar mix-blend para fundir com fundo escuro da nav */
-  }
+}
 
 .nav-logo-text { display: none; }
 .nav-logo-img.hidden + .nav-logo-text { display: inline; }
@@ -464,9 +424,7 @@ h4 { font-size: 16px; }
   border-radius: 2px;
 }
 
-.img-ph svg {
-  opacity: 0.18;
-}
+.img-ph svg { opacity: 0.18; }
 
 /* --- STAT BLOCK --- */
 .stat-block { text-align: center; }
@@ -550,9 +508,7 @@ h4 { font-size: 16px; }
 .step-content p { font-size: 14px; color: var(--col-text-2); }
 
 /* --- ACCORDION (FAQ) --- */
-.accordion-item {
-  border-bottom: 1px solid var(--col-border);
-}
+.accordion-item { border-bottom: 1px solid var(--col-border); }
 
 .accordion-btn {
   width: 100%;
@@ -689,7 +645,6 @@ h4 { font-size: 16px; }
 /* --- HERO --- */
 .hero {
   background:
-    /* fundo industrial premium — CSS puro, sem imagens externas */
     radial-gradient(ellipse at 75% 40%, rgba(212,160,0,0.07) 0%, transparent 55%),
     radial-gradient(ellipse at 15% 70%, rgba(255,255,255,0.02) 0%, transparent 50%),
     linear-gradient(160deg, #0d1117 0%, #141b28 40%, #1a2130 70%, #0f1520 100%);
@@ -700,7 +655,6 @@ h4 { font-size: 16px; }
   align-items: center;
 }
 
-/* Grade técnica discreta — padrão industrial */
 .hero::before {
   content: '';
   position: absolute;
@@ -713,7 +667,6 @@ h4 { font-size: 16px; }
   z-index: 1;
 }
 
-/* Linha de acento diagonal — textura industrial */
 .hero::after {
   content: '';
   position: absolute;
@@ -727,9 +680,7 @@ h4 { font-size: 16px; }
   z-index: 1;
 }
 
-.hero-overlay {
-  display: none; /* não mais necessário — substituído pelo CSS acima */
-}
+.hero-overlay { display: none; }
 
 .hero-content {
   position: relative;
@@ -741,7 +692,6 @@ h4 { font-size: 16px; }
 .hero-content h1 { color: #fff; margin-bottom: 20px; }
 .hero-content .lead { color: rgba(255,255,255,0.68); margin-bottom: var(--sp-lg); }
 
-/* Hint text abaixo dos botões */
 .hero-hint {
   margin-top: 18px;
   font-size: 13px;
@@ -813,7 +763,7 @@ h4 { font-size: 16px; }
 .mobile-nav {
   display: none;
   position: fixed;
-  top: 72px; /* alinhado com nova altura da nav */
+  top: 72px;
   inset-inline: 0;
   background: var(--col-steel);
   border-top: 1px solid rgba(255,255,255,0.06);
@@ -864,6 +814,7 @@ h4 { font-size: 16px; }
   pointer-events: none;
 }
 
+/* Cards da direita */
 .ia-steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -955,9 +906,7 @@ h4 { font-size: 16px; }
   overflow-y: auto;
 }
 
-.modal-overlay.open .modal {
-  transform: translateY(0);
-}
+.modal-overlay.open .modal { transform: translateY(0); }
 
 .modal-close {
   position: absolute;
@@ -994,7 +943,6 @@ h4 { font-size: 16px; }
   margin-bottom: var(--sp-md);
 }
 
-/* modal steps */
 .modal-step { display: none; }
 .modal-step.active { display: block; }
 
@@ -1106,11 +1054,9 @@ h4 { font-size: 16px; }
   flex-shrink: 0;
 }
 
-.footer-whatsapp {
-  margin-top: 16px;
-}
+.footer-whatsapp { margin-top: 16px; }
 
-/* --- RESPONSIVE BREAKPOINTS --- */
+/* --- MICRO CASE --- */
 .micro-case {
   background: var(--col-surface);
   border: 1px solid var(--col-border);
@@ -1120,10 +1066,7 @@ h4 { font-size: 16px; }
   flex-direction: column;
 }
 
-.micro-case-img {
-  width: 100%;
-  aspect-ratio: 16/9;
-}
+.micro-case-img { width: 100%; aspect-ratio: 16/9; }
 
 .micro-case-body {
   padding: var(--sp-md);
@@ -1143,46 +1086,48 @@ h4 { font-size: 16px; }
 }
 
 @media (max-width: 768px) {
+  .container { padding: 0 var(--sp-sm); }
+
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .ia-steps { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
+
   .cta-band-inner { flex-direction: column; text-align: center; }
+
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .mobile-nav.open { display: flex; }
+
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
   h1 { font-size: 30px; }
   h2 { font-size: 24px; }
+
   .modal { padding: var(--sp-md); }
 
-  /* ===== FIX LAYOUT TRIAGEM MOBILE (1 COLUNA) ===== */
-  .ia-wrap{
-    grid-template-columns: 1fr !important;
-    gap: 24px;
-  }
-  .ia-head{
-    max-width: 100%;
+  /* ✅ FIX TRIAGEM (MOBILE) — 1 coluna, sem quebrar outras seções */
+  .ia-section > .container > div {
+    grid-template-columns: 1fr !important; /* vence inline do HTML */
+    align-items: stretch !important;
   }
 
-
-}
-/* ===== HOTFIX: TRIAGEM EM 1 COLUNA NO MOBILE ===== */
-@media (max-width: 768px){
-
-  /* pega qualquer grid/flex que esteja criando 2 colunas dentro da seção IA */
-  .ia-section .container > div{
-    display: block !important;
+  .ia-btns {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  /* garante que a coluna dos cards ocupe 100% e não "grude" do lado */
-  .ia-section .ia-steps{
-    margin-top: 24px;
+  .ia-btns .btn {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
   }
 
-}/* ===== FIX TRIAGEM: FORÇAR 1 COLUNA NO MOBILE (override inline) ===== */
-@media (max-width: 768px){
-  .ia-section .container > div[style*="grid-template-columns"]{
-    display: block !important;
-    grid-template-columns: 1fr !important;
+  .ia-step,
+  .ia-step p,
+  .ia-step h4 {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
   }
 }
