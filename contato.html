@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com a Commercial VPS — solicite orçamento, fale com um especialista ou abra uma solicitação técnica.">
+  <title>Contato — Commercial VPS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Navegação principal">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Commercial VPS — página inicial"><img class="nav-logo-img" src="assets/logo.svg" alt="Commercial VPS" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';"><span class="nav-logo-text">Commercial VPS</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="solucoes.html">Soluções</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="empresa.html">Empresa</a></li>
+      <li><a href="contato.html#avaliacao-tecnica" class="nav-cta">Solicitar Avaliação Técnica</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-expanded="false" aria-label="Abrir menu" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="mobile-nav" id="mobile-nav" aria-label="Menu mobile">
+  <a href="index.html">Início</a>
+  <a href="solucoes.html">Soluções</a>
+  <a href="servicos.html">Serviços</a>
+  <a href="empresa.html">Empresa</a>
+  <a href="contato.html#avaliacao-tecnica" class="btn-primary">Solicitar Avaliação Técnica</a>
+</nav>
+
+<header class="page-header" aria-labelledby="page-heading">
+  <div class="container">
+    <span class="kicker">Avaliação Técnica · Diadema/SP</span>
+    <h1 id="page-heading">Descreva o problema.<br>Nossa engenharia responde.</h1>
+    <p>Não enviamos catálogos automáticos. Um engenheiro analisa sua solicitação e retorna com avaliação técnica real.</p>
+  </div>
+</header>
+
+<!-- FORM + INFO -->
+<section id="avaliacao-tecnica" class="section" aria-labelledby="form-heading">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:var(--sp-xl);align-items:start;">
+
+      <!-- FORM -->
+      <div>
+        <h2 id="form-heading" style="margin-bottom:var(--sp-md);">Solicitação técnica</h2>
+        <form id="contact-form" novalidate style="display:flex;flex-direction:column;gap:var(--sp-sm);" aria-label="Formulário de contato técnico">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-sm);">
+            <div class="form-group">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa *</label>
+              <input type="text" id="empresa" name="empresa" required autocomplete="organization" placeholder="Nome da empresa">
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-sm);">
+            <div class="form-group">
+              <label for="email">E-mail profissional *</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="seu@empresa.com.br">
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(XX) XXXXX-XXXX">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="area">Área de interesse *</label>
+            <select id="area" name="area" required>
+              <option value="" disabled selected>Selecione uma área</option>
+              <option value="equipamentos">Equipamentos Industriais</option>
+              <option value="projetos">Projetos de Engenharia</option>
+              <option value="assistencia">Assistência Técnica</option>
+              <option value="calibracao">Calibração RBC</option>
+              <option value="manutencao">Manutenção Preventiva</option>
+              <option value="automacao">Automação Industrial</option>
+              <option value="outro">Outro / Não sei ainda</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Descreva o problema ou necessidade técnica *</label>
+            <textarea id="mensagem" name="mensagem" required rows="5" placeholder="Ex: Precisamos calibrar uma frota de 15 chaves de torque para auditoria ISO. Ou: temos um equipamento hidráulico com vazamento e precisamos de assistência técnica urgente."></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary" style="min-width:180px;">Enviar Solicitação</button>
+            <p style="font-size:12px;color:var(--col-text-3);margin-top:8px;">Retornamos em até 1 dia útil com análise técnica preliminar.</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- INFO -->
+      <div style="display:flex;flex-direction:column;gap:var(--sp-md);">
+
+        <div class="card" aria-label="Endereço e localização">
+          <h3 style="font-size:15px;margin-bottom:12px;">📍 Endereço</h3>
+          <p style="font-size:14px;color:var(--col-text-2);line-height:1.7;">
+            Rua Tomiko Nakajima, 22<br>
+            Diadema — SP<br>
+            CEP 09942-200
+          </p>
+
+          <!-- MAP PLACEHOLDER -->
+          <div style="margin-top:16px;background:#e4e1db;border-radius:var(--r-sm);height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+            <span style="font-size:13px;color:var(--col-text-3);">📌 Mapa — Google Maps embed aqui</span>
+            <p style="position:absolute;bottom:8px;left:10px;font-size:11px;color:rgba(0,0,0,0.4);font-family:var(--font-mono);">assets/mapa-embed ou iframe Google Maps</p>
+          </div>
+        </div>
+
+        <div class="card" aria-label="Telefone e e-mail">
+          <h3 style="font-size:15px;margin-bottom:12px;">📞 Contato direto</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div>
+              <p style="font-size:12px;color:var(--col-text-3);font-weight:600;text-transform:uppercase;letter-spacing:0.1em;">Telefone / WhatsApp</p>
+              <a href="tel:+551140709150" style="font-size:16px;font-weight:600;color:var(--col-accent);">+55 11 4070-9150</a>
+              <p style="font-size:13px;color:var(--col-text-3);margin-top:2px;">WhatsApp: <a class="js-whatsapp" href="#" style="color:var(--col-accent);font-weight:600;">+55 11 98371-4384</a></p>
+            </div>
+            <div>
+              <p style="font-size:12px;color:var(--col-text-3);font-weight:600;text-transform:uppercase;letter-spacing:0.1em;">E-mail</p>
+              <a href="mailto:vps@commercialvps.com.br" style="font-size:15px;font-weight:500;color:var(--col-text);">vps@commercialvps.com.br</a>
+            </div>
+            <div>
+              <p style="font-size:12px;color:var(--col-text-3);font-weight:600;text-transform:uppercase;letter-spacing:0.1em;">Horário de atendimento</p>
+              <p style="font-size:14px;color:var(--col-text-2);">Segunda a Sexta, 8h–18h<br><span style="font-size:13px;color:var(--col-text-3);">Emergências técnicas: sob consulta</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="background:var(--col-accent-lt);border-color:rgba(212,160,0,0.25);">
+          <h4 style="font-size:14px;color:var(--col-accent-txt);margin-bottom:8px;">⚡ Atendimento de emergência</h4>
+          <p style="font-size:13px;color:var(--col-text-2);line-height:1.6;">Para paradas não programadas ou situações críticas, entre em contato por WhatsApp. Avaliamos disponibilidade de atendimento emergencial em campo.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- FAQ RÁPIDO -->
+<section class="section" style="background:var(--col-surface);" aria-labelledby="faq-ct-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="kicker">Antes de entrar em contato</span>
+      <h2 id="faq-ct-heading">Perguntas frequentes</h2>
+    </div>
+    <div style="max-width:720px;">
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false">
+          Vocês atendem pessoa física ou somente PJ?
+          <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-body">Nosso foco é atendimento B2B — empresas industriais, construtoras, prestadoras de serviço e operadores de plantas. Alguns produtos e calibrações podem ser fornecidos a pessoa física; consulte caso a caso.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false">
+          Como funciona a solicitação de orçamento?
+          <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-body">Preencha o formulário descrevendo o problema ou necessidade técnica — não precisa saber o produto exato. Um engenheiro analisa, solicita informações complementares se necessário, e retorna com proposta técnica e comercial.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false">
+          Qual o prazo de resposta para solicitações?
+          <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-body">Para solicitações padrão, retornamos em até X dias úteis. Para emergências ou situações de parada de planta, priorizamos o atendimento — informe na mensagem se é urgente.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false">
+          Vocês emitem nota fiscal eletrônica?
+          <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-body">Sim. Emitimos NF-e para produtos e NFS-e para serviços. Trabalhamos com todas as modalidades de pagamento e condições comerciais para empresas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" aria-label="Rodapé">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img class="footer-logo-img" src="assets/logo.svg" alt="Commercial VPS" style="height:32px;width:auto;mix-blend-mode:lighten;margin-bottom:12px;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+          <span class="footer-logo-text" style="display:none;font-size:17px;font-weight:700;color:#fff;">Commercial <span style="color:var(--col-accent)">VPS</span></span>
+        </div>
+        <p class="footer-desc">25 anos aplicando engenharia industrial. Torque, calibração, içamento e projetos sob medida.</p>
+        <div class="footer-whatsapp" style="margin-top:16px;">
+          <a class="btn btn-whatsapp btn-sm js-whatsapp" href="#" aria-label="Contato via WhatsApp">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.374 0 0 5.373 0 12c0 2.119.552 4.109 1.512 5.841L.046 23.96l6.292-1.449C8.003 23.476 9.96 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.847 0-3.623-.498-5.158-1.364l-.369-.22-3.832.881.914-3.741-.242-.386A9.821 9.821 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Soluções</h4>
+        <a href="solucoes.html">Equipamentos Industriais</a>
+        <a href="solucoes.html">Projetos de Engenharia</a>
+        <a href="solucoes.html">Automação Industrial</a>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <a href="servicos.html">Assistência Técnica</a>
+        <a href="servicos.html">Calibração RBC</a>
+        <a href="servicos.html">Manutenção Preventiva</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <a href="contato.html#avaliacao-tecnica">Solicitar Avaliação Técnica</a>
+        <a href="empresa.html">Sobre a empresa</a>
+        <a href="mailto:vps@commercialvps.com.br">vps@commercialvps.com.br</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Commercial VPS. Todos os direitos reservados.</span>
+      <span>CNPJ 03.854.316/0001-39</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- MODAL — ASSISTENTE POR INDÚSTRIA -->
+<div id="ia-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal">
+    <button class="modal-close" aria-label="Fechar assistente">×</button>
+    <h2 class="modal-title" id="modal-title">Assistente Técnico</h2>
+    <p class="modal-sub">Triagem inicial em 3 perguntas — sem compromisso.</p>
+    <div class="modal-progress" role="list" aria-label="Progresso">
+      <div class="progress-dot done" role="listitem"></div>
+      <div class="progress-dot" role="listitem"></div>
+      <div class="progress-dot" role="listitem"></div>
+    </div>
+    <div class="modal-body"></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
