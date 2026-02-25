@@ -188,6 +188,31 @@ h4 { font-size: 16px; }
 
 @media (max-width: 768px) {
   .container { padding: 0 var(--sp-sm); }
+
+  /* ===== FIX TRIAGEM / IA (MOBILE) ===== */
+  /* Motivo: .btn usa white-space: nowrap; por padrão, o que estoura no mobile dentro da triagem */
+  .ia-btns{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ia-btns .btn{
+    width: 100%;
+    justify-content: center;
+    white-space: normal;      /* libera quebra de linha */
+    text-align: center;
+  }
+
+  /* evita palavras grandes estourarem o card */
+  .ia-step,
+  .ia-step p,
+  .ia-step h4{
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+
 }
 
 .section { padding: var(--sp-2xl) 0; }
