@@ -514,7 +514,7 @@ h4 { font-size: 16px; }
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(255,255,255,0.08);
-  background-image: url('assets/hero-tech.jpg');
+  background-image: none;
   background-size: cover;
   background-position: center;
   transform: translateY(6px);
@@ -539,6 +539,13 @@ h4 { font-size: 16px; }
   font-size: 14px;
   font-weight: 600;
   color: var(--col-text-2);
+}
+
+/* --- SETOR CARD DESTAQUE --- */
+.setor-card--destaque {
+  background: var(--col-accent-lt);
+  border-left-color: var(--col-accent);
+  color: var(--col-text);
 }
 
 /* --- IA SECTION --- */
